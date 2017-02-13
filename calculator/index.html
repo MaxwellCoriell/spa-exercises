@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>SPA Calculator</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+	<header><h1><strong><u>LAMBDA EXPRESSION CALCULATOR</u></strong></h1></header>
+		<br>
+	<form id="inputs" class="form-group">
+		<legend id="legend">Please Enter Two Numbers:</legend>
+
+		<input type="number" id="firstNumber" class="form-control" name="firstNumber">
+		<input type="number" id="secondNumber" class="form-control" name="secondNumber">
+
+		<br>
+		<br>
+	
+		<button type="button" id="add" class="btn-default">Add</button>
+		<button type="button" id="subtract" class="btn-primary">Subtract</button>
+		<button type="button" id="multiply" class="btn-success">Multiply</button>
+		<button type="button" id="divide" class="btn-warning">Divide</button>
+	</form>
+
+	<h2 id="result">The Result: </h2>
+
+	<form id="clear-button" class="form-group">
+		<button type="button" id="clear" class="btn-danger">Clear All</button>
+	</form>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="calculator.js"></script>
+</body>
+</html>

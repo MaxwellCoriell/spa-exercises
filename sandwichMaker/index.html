@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" style="font-family: Helvetica !important">
+    <head>
+        <meta charset="utf-8">
+        <title>Sandwich Maker</title>
+        <link rel="stylesheet" href="../CSS/sandwich.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    </head>
+    <body class="container">
+        <div class="row">
+            <div>
+        <section id="bread"><p>Bread</p>
+            <input type="radio" id="rye" name="bread">
+            <label for="ryebead">Rye</label> <br>
+            <input type="radio" id="wheat" name="bread">
+            <label for="wheatbread">Wheat</label><br>
+            <input type="radio" id="nobread" name="bread">
+            <label for="nobread">No Bread</label><br>
+        </section>
+
+        <section id="meat"><p>Meat</p>
+            <input type="checkbox" id="turkey" value="turkey">
+            <label for="turkey">Turkey</label><br>
+            <input type="checkbox" id="ham" value="ham">
+            <label for="ham">Ham</label><br>
+            <input type="checkbox" id="nomeat" value="nomeat">
+            <label for="nomeat">No Meat</label><br>
+        </section>
+
+        <section id="cheese"><p>Cheese</p>
+            <input type="checkbox" id="swiss" value="swiss">
+            <label for="swiss">Swiss</label><br>
+            <input type="checkbox" id="pepperjack" value="pepperjack">
+            <label for="pepperjack">Pepper Jack</label><br>
+            <input type="checkbox" id="nocheese" value="nocheese">
+            <label for="nocheese">No Cheese Please!</label><br>
+        </section>
+
+        <section id="condiments"><p>Condiments</p>
+            <input type="checkbox" id="ketchup" value="ketchup">
+            <label for="ketchup">Ketchup</label><br>
+            <input type="checkbox" id="mustard" value="mustard">
+            <label for="mustard">Mustard</label><br>
+            <input type="checkbox" id="nocondiments" value="nocondiments">
+            <label for="nocondiments">No Condiments</label><br>
+        </section>
+
+        <section id="veggies"><p>Veggies</p>
+            <input type="checkbox" id="lettuce" value="lettuce">
+            <label for="lettuce">Lettuce</label><br>
+            <input type="checkbox" id="tomato" value="tomato">
+            <label for="tomato">Tomato</label><br>
+            <input type="checkbox" id="noveggie" value="noveggie">
+            <label for="noveggie">Veggies are gross and I don't want them ruining my sammich</label><br>
+        </section>
+
+
+
+    <div id=finalSandwich>
+
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../javascripts/SandwichMaker.js"></script>
+    <script type="text/javascript" src="../javascripts/DOMHandler.js"></script>
+    <script type="text/javascript" src="../javascripts/Meat.js"></script>
+    <script type="text/javascript" src="../javascripts/Cheese.js"></script>
+    <script type="text/javascript" src="../javascripts/Condiments.js"></script>
+    <script type="text/javascript" src="../javascripts/Veggies.js"></script>
+    <script type="text/javascript" src="../javascripts/Bread.js"></script>
+
+    </body>
+</html>
