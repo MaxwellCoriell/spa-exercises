@@ -4,17 +4,20 @@ var SandwichMaker = (function(originalSandwich) {
 
 	// Set our bread prices key:value pairs
     var veggiePrices = {
-       lettuce: 0.55,
-       tomato: 0.35,
-       noveggie: 0.00,
+	    "noVegetable": 0.00,
+	  	"tomato": 0.25,
+	  	"lettuce": 0.25,
+	  	"onion": 0.25,
+	    "greenPepper": 0.25
    };
 
 	// Adding the 'addBread' method to the sandwich
-	originalSandwich.addVeggie = function(veggie) {
+	maker.addVeggie = function(veggie) {
+		console.log(vegetablePrices[veggie]);
 		return veggiePrices[veggie];
-	}
+	};
 
 	// Return the new, augmented object with the new method on it
-	return originalSandwich;
+	return maker;
 
 })(SandwichMaker);

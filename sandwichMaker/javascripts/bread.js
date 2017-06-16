@@ -1,20 +1,24 @@
 "use strict";
+console.log("WE HAVE BREAD!")
 
-var SandwichMaker = (function(originalSandwich) {
+var SandwichMaker = (function(sandwichMaker) {
 
-	// Set our bread prices key:value pairs
+	// Private variable to set our bread prices key:value pairs
 	var breadPrices = {
-		rye: 2.00,
-		wheat: 3.00,
-		nobread: 0.00
+		"noBread": 0.00,
+		"white": 1.00,
+		"wheat": 1.00,
+		"sourdough": 2.00,
+		"pumpernickel": 2.00
 	};
 
 	// Adding the 'addBread' method to the sandwich
-	originalSandwich.addBread = function(bread) {
+	maker.addBread = function(bread) {
+		console.log(breadPrices[bread]);
 		return breadPrices[bread];
 	}
 
 	// Return the new, augmented object with the new method on it
-	return originalSandwich;
+	return maker;
 
 })(SandwichMaker);

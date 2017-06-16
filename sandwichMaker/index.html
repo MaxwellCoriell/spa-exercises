@@ -1,77 +1,68 @@
 <!DOCTYPE html>
 <html lang="en" style="font-family: Helvetica !important">
-    <head>
-        <meta charset="utf-8">
-        <title>Sandwich Maker</title>
-        <link rel="stylesheet" href="../CSS/sandwich.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<head>
+    <meta charset="utf-8">
+    <title>Sandwich Maker</title>
+</head>
+<body class="container">
+        <h1>Sandwich Maker</h1>
+    <h3> You may select multiple items from each category by holding the cmd(Mac) or ctrl(PC) button while clicking.</h3>
+    <h5>Please select from the bread:</h5>
+    <select multiple id="breadSelect" size=5 style='height: 100%;'>
+        <option name="bread" value="noBread" > No Bread 
+        <option name="bread" value="wheat"> Wheat 
+        <option name="bread" value="white"> White 
+        <option name="bread" value="sourdough"> Sourdough 
+        <option name="bread" value="pumpernickel"> Pumpernickel 
+    </select>
+    <br>
+    <h5>Please select from the meat:</h5>
+    <select multiple id="meatSelect" size=5 style='height: 100%;'>
+        <option name="meat" value="noMeat" > No Meat 
+        <option name="meat" value="ham"> Ham 
+        <option name="meat" value="turkey"> Turkey 
+        <option name="meat" value="chickenBreast"> Chicken Breast 
+        <option name="meat" value="salami"> Salami 
+    </select>
+    <br>
+    <h5>Please select from the cheese:</h5>
+    <select multiple id="cheeseSelect" size=5 style='height: 100%;'>
+        <option name="cheese" value="noCheese" > No Cheese 
+        <option name="cheese" value="cheddar"> Cheddar 
+        <option name="cheese" value="swiss"> Swiss 
+        <option name="cheese" value="pepperJack"> Pepper Jack 
+        <option name="cheese" value="provolone"> Provolone 
+    </select>
+    <br>
+    <h5>Please select from the vegetables:<h5>
+    <select multiple id="veggieSelect" size=5 style='height: 100%;'>
+        <option name="vegetable" value="noVegetable" > No Vegetable 
+        <option name="vegetable" value="tomato"> Tomato 
+        <option name="vegetable" value="lettuce"> Lettuce 
+        <option name="vegetable" value="onion"> Onion 
+        <option name="vegetable" value="greenPepper"> Green Pepper 
+    </select>
+    <br>
+    <h5>Please select from the condiments:<h5>
+    <select multiple id="condimentSelect" size=5 style='height: 100%;'>
+        <option name="condiment" value="noCondiment" > No Condiments 
+        <option name="condiment" value="mustard"> Mustard 
+        <option name="condiment" value="mayonnaise"> Mayonnaise 
+        <option name="condiment" value="vinegarAndOil"> Vinegar and Oil 
+        <option name="condiment" value="saltAndPepper"> Salt and Pepper 
+    </select>
+    <br><br>
+    <button id="submit">Submit Order</button>
+    <h3>Sandwich</h3>
+    <textarea rows=15 columns=20></textarea><br><br>
+    Price: $ <input type="text" placeholder="0.00" id="output">
+    <script type="text/javascript" src="javascripts/sandwichMaker.js"></script>
+    <script type="text/javascript" src="javascripts/bread.js"></script>
+    <script type="text/javascript" src="javascripts/meat.js"></script>
+    <script type="text/javascript" src="javascripts/cheese.js"></script>
+    <script type="text/javascript" src="javascripts/vegetable.js"></script>
+    <script type="text/javascript" src="javascripts/condiment.js"></script>
+    <script type="text/javascript" src="javascripts/main.js"></script>
 
-    </head>
-    <body class="container">
-        <div class="row">
-            <div>
-        <section id="bread"><p>Bread</p>
-            <input type="radio" id="rye" name="bread">
-            <label for="ryebead">Rye</label> <br>
-            <input type="radio" id="wheat" name="bread">
-            <label for="wheatbread">Wheat</label><br>
-            <input type="radio" id="nobread" name="bread">
-            <label for="nobread">No Bread</label><br>
-        </section>
-
-        <section id="meat"><p>Meat</p>
-            <input type="checkbox" id="turkey" value="turkey">
-            <label for="turkey">Turkey</label><br>
-            <input type="checkbox" id="ham" value="ham">
-            <label for="ham">Ham</label><br>
-            <input type="checkbox" id="nomeat" value="nomeat">
-            <label for="nomeat">No Meat</label><br>
-        </section>
-
-        <section id="cheese"><p>Cheese</p>
-            <input type="checkbox" id="swiss" value="swiss">
-            <label for="swiss">Swiss</label><br>
-            <input type="checkbox" id="pepperjack" value="pepperjack">
-            <label for="pepperjack">Pepper Jack</label><br>
-            <input type="checkbox" id="nocheese" value="nocheese">
-            <label for="nocheese">No Cheese Please!</label><br>
-        </section>
-
-        <section id="condiments"><p>Condiments</p>
-            <input type="checkbox" id="ketchup" value="ketchup">
-            <label for="ketchup">Ketchup</label><br>
-            <input type="checkbox" id="mustard" value="mustard">
-            <label for="mustard">Mustard</label><br>
-            <input type="checkbox" id="nocondiments" value="nocondiments">
-            <label for="nocondiments">No Condiments</label><br>
-        </section>
-
-        <section id="veggies"><p>Veggies</p>
-            <input type="checkbox" id="lettuce" value="lettuce">
-            <label for="lettuce">Lettuce</label><br>
-            <input type="checkbox" id="tomato" value="tomato">
-            <label for="tomato">Tomato</label><br>
-            <input type="checkbox" id="noveggie" value="noveggie">
-            <label for="noveggie">Veggies are gross and I don't want them ruining my sammich</label><br>
-        </section>
-
-
-
-    <div id=finalSandwich>
-
-    </div>
-
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="../javascripts/SandwichMaker.js"></script>
-    <script type="text/javascript" src="../javascripts/DOMHandler.js"></script>
-    <script type="text/javascript" src="../javascripts/Meat.js"></script>
-    <script type="text/javascript" src="../javascripts/Cheese.js"></script>
-    <script type="text/javascript" src="../javascripts/Condiments.js"></script>
-    <script type="text/javascript" src="../javascripts/Veggies.js"></script>
-    <script type="text/javascript" src="../javascripts/Bread.js"></script>
-
-    </body>
+</body>
 </html>
